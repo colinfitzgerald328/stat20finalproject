@@ -182,7 +182,7 @@ knitr::opts_chunk$set(
 	warning = FALSE
 )
 ggplot(data=nba2019,aes(x=salary/1000000,y=gp)) +
-  geom_point(col="blue", alpha=0.4, size=1) +
+  geom_point(col="darkseagreen4", alpha=0.4, size=1) +
   geom_smooth(method="lm", se=F)+
   labs(title="Scatterplot of NBA 2019 Salary vs Games Played", x="Salary (millions of dollars)", y="Games Played")
 ```
