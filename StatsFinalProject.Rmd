@@ -43,7 +43,7 @@ The data consists of pairs of points from which the correlation coefficient r ca
 
 The scatterplots below are not based on simple random samples and are not foot-ball shaped. However, for the purposes of finding r values, and conducting hypothesis tests on the data, this project assumes the data set is all from a simple random sample of 2020 and 2019  and their scatterplots are foot-ball shaped. 
 
-## Distribution of NBA Salaries
+## Distribution of NBA Salaries - Jasmine Kamalnathan
 
 ```{r echo=FALSE}
 knitr::opts_chunk$set(
@@ -97,7 +97,7 @@ mean(nba2020$salary20.21, na.rm = TRUE)
 
 ### Body Type
 
-#### Salary and Age
+#### Salary and Age - Jasmine Kamalnathan
 
 ```{r echo=FALSE}
 knitr::opts_chunk$set(
