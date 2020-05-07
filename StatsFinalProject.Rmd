@@ -1,5 +1,5 @@
 ---
-title: 'NBA Salaries: What Variables Are Good Predictors of Salary?'
+title: 'NBA Salaries: What variables are good predictors of salary?'
 author: "Colin FitzGerald, Jasmine Kamalnathan, Victoria Ng, Stanley Quiros, Daniel Vermeulen, Ruoyi Yang"
 output:
   word_document: default
@@ -43,7 +43,7 @@ The data consists of pairs of points from which the correlation coefficient r ca
 
 The scatterplots below are not based on simple random samples and are not foot-ball shaped. However, for the purposes of finding r values, and conducting hypothesis tests on the data, this project assumes the data set is all from a simple random sample of 2020 and 2019  and their scatterplots are foot-ball shaped. 
 
-## Distribution of NBA Salaries - Jasmine Kamalnathan
+## Distribution of NBA Salaries
 
 ```{r echo=FALSE}
 knitr::opts_chunk$set(
@@ -97,7 +97,7 @@ mean(nba2020$salary20.21, na.rm = TRUE)
 
 ### Body Type
 
-#### Salary and Age - Jasmine Kamalnathan
+#### Salary and Age
 
 ```{r echo=FALSE}
 knitr::opts_chunk$set(
@@ -108,7 +108,7 @@ knitr::opts_chunk$set(
 ggplot(data=nba2019,aes(x=salary/1000000,y=age)) +
   geom_point(col="blue", alpha=0.4, size=1) +
   geom_smooth(method="lm", se=F)+
-  labs(title="Scatterplot of NBA 2019 Salary vs Age", x="Salary (millions of dollars)", y="Age)")
+  labs(title="Scatterplot of NBA 2019 Salary vs Age", x="Salary (millions of dollars)", y="(Age)")
 ```
 
 ```{r include=FALSE}
@@ -131,10 +131,11 @@ knitr::opts_chunk$set(
 	warning = FALSE
 )
 ggplot(data=nba2019,aes(x=salary/1000000,y=height)) +
-  geom_point(col="blue", alpha=0.4, size=1) +
+  geom_point(col="red", alpha=0.4, size=1) +
   geom_smooth(method="lm", se=F)+
   labs(title="Scatterplot of NBA 2019 Salary vs Height", x="Salary (millions of dollars)", y="Height (inches)")
 ```
+*Created by Victoria Ng*
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(
@@ -182,7 +183,7 @@ knitr::opts_chunk$set(
 	warning = FALSE
 )
 ggplot(data=nba2019,aes(x=salary/1000000,y=gp)) +
-  geom_point(col="darkseagreen4", alpha=0.4, size=1) +
+  geom_point(col="blue", alpha=0.4, size=1) +
   geom_smooth(method="lm", se=F)+
   labs(title="Scatterplot of NBA 2019 Salary vs Games Played", x="Salary (millions of dollars)", y="Games Played")
 ```
@@ -373,11 +374,11 @@ P (z > 8.301833) = 0%
 
 We reject the null. The correlation of 0.35 between salary and age is real.
 
-##### Is the correlation of 0.05 between salary and height real?
+##### Is the correlation of 0.05 between salary and height real? - *Victoria Ng*
 
-Null: There is no correlation between the salary of players and their heights. 
+Null: There is no real correlation between the salary of players and their heights. 
 
-Alternative: There is a real relationship between the salary of players and their heights.
+Alternative: There is a real relationship between the salary of players and their heights. 
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(
@@ -624,8 +625,6 @@ We reject the null. The correlation of 0.88 between between average points per g
 
 # Conclusion
 
-Concluding remarks. Might include:
-
 This research project aimed to answer: 
 
 *Question 1: Is the difference between 2019-2020 and 2020-2021 average salary significant?*
@@ -634,7 +633,7 @@ The two sample hypthosis test using the SE difference between 2019-2020 and 2020
 
 *Question 2: Do a player's body type, experience, and performance statistics affect salary? What are the dominant variables that determine a player’s salary?*
 
-Body Type: The correlation between all body type variables and salary are real, except for weight. The correlation between age and salary is 0.35 and the correlation between salary and weight is 0.15. While these correlations are real, the correlation between weight and salary doesn't seem very important given that the correlation isn't very strong. Age is the most dominant "body type" variable analyzed that is a partial predictor salary.
+Body Type: The correlation between age and salary and weight and salary are real. The correlation between age and salary is 0.35 and the correlation between salary and weight is 0.15. While these correlations are real, the correlation between weight and salary doesn't seem very important given that the correlation isn't very strong. The correlation between height and salary is very small at 0.05, and so there is no real relationship between the two variables. Age is the most dominant "body type" variable analyzed that is a partial predictor salary.
 
 Performance Statistics: The correlation between all performance statistics variables and salary are real. The correlation between salary and games played in the 2019 season is 0.32 and the correlation between salary and average minutes played per game is 0.62. While both of these correlations are real, average minutes played per game is the more dominant "performance statistic" variable analyzed that is a partial predictor of salary. 
 
