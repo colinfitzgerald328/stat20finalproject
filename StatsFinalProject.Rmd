@@ -187,7 +187,7 @@ ggplot(data=nba2019,aes(x=salary/1000000,y=gp)) +
   geom_smooth(method="lm", se=F)+
   labs(title="Scatterplot of NBA 2019 Salary vs Games Played", x="Salary (millions of dollars)", y="Games Played")
 ```
-
+*Created by Daniel Vermeulen*
 ```{r include=FALSE}
 knitr::opts_chunk$set(
 	echo = FALSE,
