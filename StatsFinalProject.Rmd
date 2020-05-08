@@ -438,7 +438,7 @@ P (z > 1.166586) is about 0.06%.
 
 We reject the null. The correlation of 0.15 between salary and weight is real.
 
-##### Is the correlation of 0.32 between salary and games played real?
+##### Is the correlation of 0.32 between salary and games played real? - *Daniel Vermeulen*
 
 Null: There is no correlation between the salary of players and games played. 
 
