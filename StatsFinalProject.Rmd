@@ -111,6 +111,7 @@ ggplot(data=nba2019,aes(x=salary/1000000,y=age)) +
   labs(title="Scatterplot of NBA 2019 Salary vs Age", x="Salary (millions of dollars)", y="(Age)")
 ```
 *Created by Jasmine Kamalnathan*
+
 ```{r include=FALSE}
 knitr::opts_chunk$set(
 	echo = FALSE,
@@ -161,7 +162,6 @@ ggplot(data=nba2019,aes(x=salary/1000000,y=weight)) +
   geom_smooth(method="lm", se=F)+
   labs(title="Scatterplot of NBA 2019 Salary vs Weight", x="Salary (millions of dollars)", y="Weight (pounds)")
 ```
-
 *Created by Stanley Quiros*
 
 ```{r include=FALSE}
@@ -189,7 +189,6 @@ ggplot(data=nba2019,aes(x=salary/1000000,y=gp)) +
   geom_smooth(method="lm", se=F)+
   labs(title="Scatterplot of NBA 2019 Salary vs Games Played", x="Salary (millions of dollars)", y="Games Played (per player)")
 ```
-
 *Created by Daniel Vermeulen*
 
 ```{r include=FALSE}
@@ -216,7 +215,6 @@ ggplot(data=nba2019,aes(x=salary/1000000,y=min)) +
   geom_smooth(method="lm", se=F)+
   labs(title="Scatterplot of NBA 2019 Salary vs Minutes Played", x="Salary (millions of dollars)", y="Minutes Played")
 ```
-
 *Created by Ruoyi Yang*
 
 ```{r include=FALSE}
