@@ -452,8 +452,8 @@ knitr::opts_chunk$set(
 )
 
 gpR = cor(nba2019$salary, nba2019$gp, use="complete.obs")
-SDnba2019gp = sd(newnba2019$gp)
-SDnba2019salary = sd(newnba2019$salary)
+SDnba2019gp = sd(filter(nba2019, salary > 0)$gp)
+SDnba2019salary = sd(filter(nba2019, salary > 0)$salary)
 
 SEsalaryvsgp = (sqrt(1-gpR^2)*SDnba2019gp)/(sqrt(470-2)*SDnba2019salary)
 gpM = gpR*SDnba2019gp/SDnba2019salary
