@@ -161,7 +161,7 @@ ggplot(data=nba2019,aes(x=salary/1000000,y=weight)) +
   geom_smooth(method="lm", se=F)+
   labs(title="Scatterplot of NBA 2019 Salary vs Weight", x="Salary (millions of dollars)", y="Weight (pounds)")
 ```
-
+*Created by Stanley Quiros*
 ```{r include=FALSE}
 knitr::opts_chunk$set(
 	echo = FALSE,
@@ -409,7 +409,7 @@ P (z > 1.166586) is about 12%.
 
 We cannot reject the null. The correlation of 0.05 between salary and height is not real.
 
-##### Is the correlation of 0.15 between salary and weight real?
+##### Is the correlation of 0.15 between salary and weight real? - *Stanley Quiros* 
 
 Null: There is no correlation between the salary of players and their weights. 
 
