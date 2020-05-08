@@ -421,9 +421,7 @@ knitr::opts_chunk$set(
 	message = TRUE,
 	warning = FALSE
 )
-#Finding SE corresponding to the slope of the regression
 weightR = cor(nba2019$salary, nba2019$weight, use="complete.obs")
-#SE for slope of reg line = (sqrt(1-r^2)*SDy)/(sqrt(n-2)*SDx)
 SDnba2019weight = sd(newnba2019$weight)
 SDnba2019salary = sd(newnba2019$salary)
 
