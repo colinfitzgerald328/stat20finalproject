@@ -450,15 +450,13 @@ knitr::opts_chunk$set(
 	message = TRUE,
 	warning = FALSE
 )
-#Finding SE corresponding to the slope of the regression
+
 gpR = cor(nba2019$salary, nba2019$gp, use="complete.obs")
-#SE for slope of reg line = (sqrt(1-r^2)*SDy)/(sqrt(n-2)*SDx)
 SDnba2019gp = sd(newnba2019$gp)
 SDnba2019salary = sd(newnba2019$salary)
 
 SEsalaryvsgp = (sqrt(1-gpR^2)*SDnba2019gp)/(sqrt(470-2)*SDnba2019salary)
 gpM = gpR*SDnba2019gp/SDnba2019salary
-
 zgp = (gpM - 0)/ SEsalaryvsgp
 (1-pnorm(zgp))*100 
 ```
