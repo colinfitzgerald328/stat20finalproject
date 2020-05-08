@@ -212,7 +212,7 @@ ggplot(data=nba2019,aes(x=salary/1000000,y=min)) +
   geom_smooth(method="lm", se=F)+
   labs(title="Scatterplot of NBA 2019 Salary vs Minutes Played", x="Salary (millions of dollars)", y="Minutes Played")
 ```
-
+*Created by Ruoyi Yang*
 ```{r include=FALSE}
 knitr::opts_chunk$set(
 	echo = FALSE,
@@ -463,7 +463,7 @@ P (z > 7.26176) is essentially 0%.
 
 Since the P-value is so small, we reject the null. This means that the correlation of 0.32 between player salary and the number of games played is real.
 
-##### Is the correlation of 0.60 between salary and average minutes played per game real?
+##### Is the correlation of 0.60 between salary and average minutes played per game real? - *Ruoyi Yang*
 
 Null: There is no correlation between the salary of players and average minutes played per game.
 
