@@ -1,5 +1,5 @@
 ---
-title: 'NBA Salaries: What variables are good predictors of salary?'
+title: 'NBA Salaries: What Variables Are Good Predictors of Salary?'
 author: "Colin FitzGerald, Jasmine Kamalnathan, Victoria Ng, Stanley Quiros, Daniel Vermeulen, Ruoyi Yang"
 output:
   word_document: default
