@@ -234,8 +234,9 @@ knitr::opts_chunk$set(
 	message = TRUE,
 	warning = FALSE
 )
-ggplot(nba2019,aes(x=salary/1000000,y=pts))+geom_point(alpha=0.5,size=0.5,color="blue")+geom_smooth(method=lm,se=F,color="red")+labs(title="Salary vs. Points, NBA 2019",x="2019 NBA Salary (millions of dollars)",y="Average Points Per Game")
+ggplot(nba2019,aes(x=salary/1000000,y=pts))+geom_point(alpha=0.5,size=0.5,color="blue")+geom_smooth(method=lm,se=F,color="red")+labs(title="Scatterplot of NBA 2019 Salary vs Points", x="Salary (millions of dollars)", y="Points")
 ```
+*Created by Colin FitzGerald*
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(
@@ -243,7 +244,9 @@ knitr::opts_chunk$set(
 	message = TRUE,
 	warning = FALSE
 )
-r = cor(nba2019$salary, nba2019$pts, use="complete.obs")
+salaryvspts=data.frame(nba2019$salary,nba2019$pts)
+salaryvspts=na.omit(salaryvspts)
+r = cor(salaryvspts$nba2019.salary,salaryvspts$nba2019.pts)
 ```
 
 The correlation coefficient between 2019 salary and average points per game is apprroximately 0.63.
@@ -257,10 +260,11 @@ knitr::opts_chunk$set(
 	warning = FALSE
 )
 ggplot(data=nba2019,aes(x=salary/1000000,y=ast)) +
-  geom_point(col="blue", alpha=0.4, size=1) +
-  geom_smooth(method="lm", se=F)+
+  geom_point(alpha=0.5,size=0.5,color="blue") +
+  geom_smooth(method="lm", se=F,color="red")+
   labs(title="Scatterplot of NBA 2019 Salary vs Assists", x="Salary (millions of dollars)", y="Assists")
 ```
+*Created by Colin FitzGerald*
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(
@@ -268,7 +272,9 @@ knitr::opts_chunk$set(
 	message = TRUE,
 	warning = FALSE
 )
-r = cor(nba2019$salary, nba2019$ast, use="complete.obs")
+salaryvsassists=data.frame(nba2019$salary,nba2019$ast)
+salaryvsassists=na.omit(salaryvsassists)
+r = cor(salaryvsassists$nba2019.salary,salaryvsassists$nba2019.ast)
 ```
 
 The correlation coefficient between 2019 salary and average assists per game is apprroximately 0.52.
@@ -282,10 +288,11 @@ knitr::opts_chunk$set(
 	warning = FALSE
 )
 ggplot(data=nba2019,aes(x=salary/1000000,y=fgp)) +
-  geom_point(col="blue", alpha=0.4, size=1) +
-  geom_smooth(method="lm", se=F)+
+  geom_point(col="blue", alpha=0.5, size=0.5) +
+  geom_smooth(method="lm", se=F,color="red")+
   labs(title="Scatterplot of NBA 2019 Salary vs Field Goal Percentage", x="Salary (millions of dollars)", y="Field Goal Percentage")
 ```
+*Created by Colin FitzGerald*
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(
@@ -293,10 +300,12 @@ knitr::opts_chunk$set(
 	message = TRUE,
 	warning = FALSE
 )
-r = cor(nba2019$salary, nba2019$fgp, use="complete.obs")
+salaryvsfgp=data.frame(nba2019$salary,nba2019$fgp)
+salaryvsfgp=na.omit(salaryvsfgp)
+cor(salaryvsfgp$nba2019.salary,salaryvsfgp$nba2019.fgp)
 ```
 
-The correlation coefficient between 2019 salary and field goal percentage is apprroximately 0.15.
+The correlation coefficient between 2019 salary and field goal percentage is apprroximately 0.13.
 
 # Data Analysis
 
@@ -487,11 +496,11 @@ P (z > 16.16437) is essentially 0%.
 
 We reject the null. The correlation of 0.60 between salary and average minutes played per game is real.
 
-##### Is the correlation of 0.63 between salary and average points per game real?
+##### Is the correlation of 0.63 between salary and average points per game real? *Colin FitzGerald*
 
-Null: There is no correlation between the salary of players and average points per game. 
+Null: There is no linear relationship between the salary of players and average points per game. 
 
-Alternative: There is a real relationship between the salary of players and average points per game.
+Alternative: There is a real linear relationship between the salary of players and average points per game.
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(
@@ -514,13 +523,13 @@ zpts = (ptsM - 0)/ SEsalaryvspts
 
 P (z >  17.77685) is essentially 0%.
 
-We reject the null. The correlation of 0.63 between salary and average points per game is real.
+We reject the null. The p-value of 0% is highly statistically significant. The correlation of 0.63 between salary and average points per game is real. There is sufficient evidence that there is a linear relationship between salary and average points scored per game. 
 
-##### Is the correlation of 0.52 between salary and average assists per game real?
+##### Is the correlation of 0.52 between salary and average assists per game real? *Colin FitzGerald*
 
-Null: There is no correlation between the salary of players and average assists per game. 
+Null: There isn't a linear relationship between the salary of players and average assists per game. 
 
-Alternative: There is a real relationship between the salary of players and average assists per game.
+Alternative: There is a real linear relationship between the salary of players and average assists per game.
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(
@@ -543,13 +552,13 @@ zast = (astM - 0)/ SEsalaryvsast
 
 P (z >  13.12086) is essentially 0%.
 
-We reject the null. The correlation of 0.52 between salary and average assists per game is real.
+We reject the null. The p-value of 0% is highly statistically significant. The correlation of 0.52 between salary and average assists per game is real. There is sufficient evidence that there is a linear relationship between salary and average assists per game. 
 
-##### Is the correlation of 0.15 between salary and field goal percentage real?
+##### Is the correlation of 0.13 between salary and field goal percentage real? *Colin FitzGerald*
 
-Null: There is no correlation between the salary of players and field goal percentage. 
+Null: There isn't a linear relationship between the salary of players and field goal percentage. 
 
-Alternative: There is a real relationship between the salary of players and field goal percentage.
+Alternative: There is a real linear relationship between the salary of players and field goal percentage.
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(
@@ -572,7 +581,7 @@ zfgp = (fgpM - 0)/ SEsalaryvsfgp
 
 P (z >  2.835834) is essentially 0.2%.
 
-We reject the null. The correlation of 0.15 between salary and field goal percentage is real.
+We reject the null at the 1% level. The correlation of 0.13 between salary and field goal percentage is real. There is sufficient evidence that there is a linear relationship between salary and field goal percentage. 
 
 #### Is there a correlation between average minutes played per game and average points per game? - *Jasmine Kamalnathan*
  
