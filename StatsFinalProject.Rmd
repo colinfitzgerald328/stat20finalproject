@@ -67,7 +67,7 @@ knitr::opts_chunk$set(
 mean(nba2020$salary19.20)
 ```
 
-*This histogram shows the density of NBA players in several salary brackets for the 2019-2020 season. The vertical blue line indicates the average salary in millions of dollars: $7,561,619.*
+*Created by Jasmine Kamalnathan: This histogram shows the density of NBA players in several salary brackets for the 2019-2020 season. The vertical blue line indicates the average salary in millions of dollars: $7,561,619.*
 
 ```{r echo=FALSE}
 knitr::opts_chunk$set(
@@ -91,7 +91,7 @@ knitr::opts_chunk$set(
 mean(nba2020$salary20.21, na.rm = TRUE)
 ```
 
-*This histogram shows the density of NBA players in several salary brackets for the 2020-2021 season. The vertical purple line indicates the average salary in millions of dollars: $9,683,054.*
+*Created by Jasmine Kamalnathan: This histogram shows the density of NBA players in several salary brackets for the 2020-2021 season. The vertical purple line indicates the average salary in millions of dollars: $9,683,054.*
 
 ## Scatterplots of Salary and Body Type, Experience, and Performance Stats Variables from NBA 2020 Statistics
 
@@ -110,7 +110,7 @@ ggplot(data=nba2019,aes(x=salary/1000000,y=age)) +
   geom_smooth(method="lm", se=F)+
   labs(title="Scatterplot of NBA 2019 Salary vs Age", x="Salary (millions of dollars)", y="(Age)")
 ```
-
+*Created by Jasmine Kamalnathan*
 ```{r include=FALSE}
 knitr::opts_chunk$set(
 	echo = FALSE,
@@ -305,7 +305,7 @@ The correlation coefficient between 2019 salary and field goal percentage is app
 
 ### Question 1
 
-#### Is the difference between 2019-2020 and 2020-2021 average salary significant?
+#### Is the difference between 2019-2020 and 2020-2021 average salary significant? - *Jasmine Kamalnathan*
 
 Null: Average salary for 2019-2020 is $7,561,619 while the average salary for 2020-2021 is $9,683,054. This difference is due to chance. The average salary in 2019-2020 and 2020-2021 is the same. 
 
@@ -341,7 +341,7 @@ Reject the null. The difference in 2019-20 and 2020-21 in average salary is not 
 ### Question 2
 #### Do a player's body type, experience, and performance statistics affect 2019 salary? What are the dominant variables that determine a player’s salary in 2019?
 
-##### Is the correlation of 0.36 between salary and age real?
+##### Is the correlation of 0.36 between salary and age real? - *Jasmine Kamalnathan*
 
 Null: There is no correlation between the salary of players and their age. 
 
@@ -577,8 +577,8 @@ P (z >  2.835834) is essentially 0.2%.
 
 We reject the null. The correlation of 0.15 between salary and field goal percentage is real.
 
-#### Is there a correlation between average minutes played per game and average points per game?
-
+#### Is there a correlation between average minutes played per game and average points per game? - *Jasmine Kamalnathan*
+ 
 ```{r echo=FALSE}
 knitr::opts_chunk$set(
 	echo = FALSE,
@@ -594,7 +594,7 @@ mingpr = cor(nba2019$pts, nba2019$min, use="complete.obs")
 ```
 The correlation between average points per game and average minutes per game is of 0.88.
 
-##### Is the correlation of 0.88 between average points per game and average minutes per game real?
+##### Is the correlation of 0.88 between average points per game and average minutes per game real? -*Jasmine Kamalnathan*
 
 Null: There is no correlation between average points per game and average minutes per game. 
 
