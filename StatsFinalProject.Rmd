@@ -461,7 +461,7 @@ zgp = (gpM - 0)/ SEsalaryvsgp
 
 P (z > 7.26176) is essentially 0%.
 
-Since the P-value is so small, we reject the null. The correlation of 0.32 between salary and games played is real.
+Since the P-value is so small, we reject the null. This means that the correlation of 0.32 between player salary and the number of games played is real.
 
 ##### Is the correlation of 0.60 between salary and average minutes played per game real?
 
