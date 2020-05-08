@@ -30,7 +30,7 @@ To explore this question we relied on the 2019 NBA data set which contains sever
 
 *(3) Performance Statistics*
 
-Body Type is measured by the age, height, and weight of the players. Experience is measured by games played (gp) and averrage minutes played per game (min) during the 2019 season. Performance statistics is measured by average points scored per game (pts), averages assists per game (ast), and field goal percenage (fgp) for the 2019 basketball season. 
+Body Type is measured by the age, height, and weight of the players. Experience is measured by games played (gp) and average minutes played per game (min) during the 2019 season. Performance statistics is measured by average points scored per game (pts), averages assists per game (ast), and field goal percenage (fgp) for the 2019 basketball season. 
 	
 ##### Study Questions
 Question 1: Is the difference between 2019-2020 and 2020-2021 average salary significant?
