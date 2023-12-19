@@ -1,0 +1,19 @@
+repo_name: colinfitzgerald328/stat20finalproject
+report_id: 800e5d948267ed6b3b1676bc2a899120
+version: 0.1
+repo_type: Public
+timestamp: '2023-12-19T22:06:57+00:00'
+requested_by: djverm
+provider: github
+branch: master
+detected_tools_count: 1
+tools:
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source: Repo Metadata
